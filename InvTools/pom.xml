@@ -11,11 +11,8 @@
     <name>InvTools</name>
 
     <properties>
-        <!-- Java-Version, die dein Paper-Server benötigt (Paper 26.x: Java 25). Bei Bedarf anpassen. -->
-        <java.version>25</java.version>
-        <!-- Paper-API-Version. Falls Maven sie nicht findet: auf https://repo.papermc.io unter
-             io/papermc/paper/paper-api nachsehen, welche Version für 26.3 existiert, und hier eintragen. -->
-        <paper.api.version>26.3-R0.1-SNAPSHOT</paper.api.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -30,7 +27,7 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>${paper.api.version}</version>
+            <version>1.20.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -41,9 +38,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.11.0</version>
                 <configuration>
-                    <release>${java.version}</release>
+                    <source>21</source>
+                    <target>21</target>
                 </configuration>
             </plugin>
         </plugins>
